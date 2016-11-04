@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @aventure.title %>
+</p>
+
+<p>
+  <strong>Aventure text:</strong>
+  <%= @aventure.aventure_text %>
+</p>
+
+<p>
+  <strong>Aventure video:</strong>
+  <%= @aventure.aventure_video %>
+</p>
+
+<p>
+  <strong>Aventure audio:</strong>
+  <%= @aventure.aventure_audio %>
+</p>
+
+<p>
+  <strong>Tag metier:</strong>
+  <%= @aventure.tag_metier %>
+</p>
+
+<p>
+  <strong>Tag region:</strong>
+  <%= @aventure.tag_region %>
+</p>
+
+<p>
+  <strong>Aventure portrait:</strong>
+  <%= @aventure.aventure_portrait %>
+</p>
+
+<p>
+  <strong>Aventure illu:</strong>
+  <%= @aventure.aventure_illu %>
+</p>
+
+<%= link_to 'Edit', edit_aventure_path(@aventure) %> |
+<%= link_to 'Back', aventures_path %>

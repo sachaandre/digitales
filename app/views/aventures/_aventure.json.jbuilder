@@ -1,0 +1,2 @@
+json.extract! aventure, :id, :title, :aventure_text, :aventure_video, :aventure_audio, :tag_metier, :tag_region, :aventure_portrait, :aventure_illu, :created_at, :updated_at
+json.url aventure_url(aventure, format: :json)

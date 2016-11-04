@@ -1,0 +1,57 @@
+<%= form_for(aventure) do |f| %>
+  <% if aventure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(aventure.errors.count, "error") %> prohibited this aventure from being saved:</h2>
+
+      <ul>
+      <% aventure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :aventure_text %>
+    <%= f.text_area :aventure_text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :aventure_video %>
+    <%= f.text_field :aventure_video %>
+  </div>
+
+  <div class="field">
+    <%= f.label :aventure_audio %>
+    <%= f.text_field :aventure_audio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tag_metier %>
+    <%= f.text_field :tag_metier %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tag_region %>
+    <%= f.text_field :tag_region %>
+  </div>
+
+  <div class="field">
+    <%= f.label :aventure_portrait %>
+    <%= f.text_field :aventure_portrait %>
+  </div>
+
+  <div class="field">
+    <%= f.label :aventure_illu %>
+    <%= f.text_field :aventure_illu %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

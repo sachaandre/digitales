@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aventures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Aventure text</th>
+      <th>Aventure video</th>
+      <th>Aventure audio</th>
+      <th>Tag metier</th>
+      <th>Tag region</th>
+      <th>Aventure portrait</th>
+      <th>Aventure illu</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aventures.each do |aventure| %>
+      <tr>
+        <td><%= aventure.title %></td>
+        <td><%= aventure.aventure_text %></td>
+        <td><%= aventure.aventure_video %></td>
+        <td><%= aventure.aventure_audio %></td>
+        <td><%= aventure.tag_metier %></td>
+        <td><%= aventure.tag_region %></td>
+        <td><%= aventure.aventure_portrait %></td>
+        <td><%= aventure.aventure_illu %></td>
+        <td><%= link_to 'Show', aventure %></td>
+        <td><%= link_to 'Edit', edit_aventure_path(aventure) %></td>
+        <td><%= link_to 'Destroy', aventure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aventure', new_aventure_path %>

@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @variable.name %>
+</p>
+
+<p>
+  <strong>Var def:</strong>
+  <%= @variable.var_def %>
+</p>
+
+<p>
+  <strong>Liste des indefs liés à cette variable</strong>
+  <% @variable.indefinitions.each do |f|%>
+    <%= link_to f.name, f%>
+  <%end%>
+</p>
+
+<%= link_to 'Edit', edit_variable_path(@variable) %> |
+<%= link_to 'Back', variables_path %>
