@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag @aventure.aventure_portrait.url(:thumb) %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @aventure.title %>
 </p>
@@ -28,11 +32,6 @@
 <p>
   <strong>Tag region:</strong>
   <%= @aventure.tag_region %>
-</p>
-
-<p>
-  <strong>Aventure portrait:</strong>
-  <%= @aventure.aventure_portrait %>
 </p>
 
 <p>

@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <%= link_to 'Aventures', aventures_path %>
+        <%= link_to 'Indéfinitions', indefinitions_path %>
+        <%= link_to 'Variables', variables_path %>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
