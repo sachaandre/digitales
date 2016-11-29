@@ -6,7 +6,6 @@ class AventuresController < ApplicationController
   def index
     if params[:variable_id]
       @aventures = Variable.find(params[:variable_id]).aventures
-
     else
       @aventures = Aventure.all
     end
