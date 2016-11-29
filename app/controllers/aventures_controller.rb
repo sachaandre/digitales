@@ -4,9 +4,12 @@ class AventuresController < ApplicationController
   # GET /aventures
   # GET /aventures.json
   def index
+    if params[:variable_id]
+      @aventures = Variable.find(params[:variable_id]).aventures
 
+    else
       @aventures = Aventure.all
-
+    end
   end
 
   # GET /aventures/1
@@ -64,13 +67,14 @@ class AventuresController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_aventure
-      @aventure = Aventure.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def aventure_params
-      params.require(:aventure).permit(:title, :aventure_text, :aventure_video, :aventure_audio, :tag_metier, :tag_region, :aventure_portrait, :aventure_illu)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_aventure
+    @aventure = Aventure.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def aventure_params
+    params.require(:aventure).permit(:title, :aventure_text, :aventure_video, :aventure_audio, :tag_metier, :tag_region, :aventure_portrait, :aventure_illu, variable_ids: [])
+  end
 end

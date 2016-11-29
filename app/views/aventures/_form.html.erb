@@ -50,7 +50,10 @@
     <%= f.label :aventure_illu %>
     <%= f.text_field :aventure_illu %>
   </div>
-
+  <div class="field">
+    <%= f.label "Variables attachées"%>
+    <%= collection_check_boxes :aventure, :variable_ids, Variable.all, :id, :name %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
