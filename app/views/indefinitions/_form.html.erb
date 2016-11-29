@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label "Variable attachée"%>
-    <%= f.text_field :variable_ids%>
+    <%= collection_check_boxes :indefinition, :variable_ids, Variable.all, :id, :name %>
   </div>
 
   <div class="actions">
