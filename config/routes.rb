@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   resources :variables
   resources :aventures
 
+  resources :variables do
+    resources :aventures, only: [:index]
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

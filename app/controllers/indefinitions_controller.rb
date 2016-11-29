@@ -69,6 +69,6 @@ class IndefinitionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def indefinition_params
-      params.require(:indefinition).permit(:name, :def, :variable_ids)
+      params.require(:indefinition).permit(:name, :def, variable_ids:[])
     end
 end
