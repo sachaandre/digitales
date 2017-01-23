@@ -6,14 +6,12 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="slide-content">
-
-
-        <h1><%= image_tag "logo.png", id: "logo" %> Digitales</h1>
-        <h2> Tell your own digital adventure </h2>
-        <p>
-          Digitales est une plateforme qui rassemble des récits témoignant de l'impact du numérique dans la vie de chacun.
-          C'est une invitation a explorer l'aventure numérique d'une multitude de façons afin de parcourir son évolution.
-        </p>
+        <div class="slide-titles">
+          <h1><%= image_tag "logo.png", id: "logo" %> Digitales</h1>
+          <h2> Create your own digital adventure </h2>
+        </div>
+        <div id="text">Digitales est une plateforme qui rassemble des récits témoignant de l'impact du numérique dans la vie de chacun.
+        C'est une invitation a explorer l'aventure numérique d'une multitude de façons afin de parcourir son évolution.</div>
         <div class="hpage_links">
           <%= link_to "see a portrait", aventures_path, class: "btn btn-default" %>
           <%= link_to "see a theme", variables_path, class: "btn btn-default " %>

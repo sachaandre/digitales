@@ -1,32 +1,35 @@
 <div class="container">
+  <div class="row aventure_row">
+    <div class="col-xs-12 col-md-6 left">
 
-  <div class="col-xs-4">
-
-      <%= image_tag @aventure.aventure_portrait.url(:thumb), class: "aventure_img" %>
-
-    <div class="aventure_info">
-      <%= @aventure.first_name %>
-      <span id="last_n"> <%= @aventure.last_name %></span>
-      |
-      <%= @aventure.age %> ans
+      <%= image_tag @aventure.aventure_portrait.url(:large), class: "aventure_img" %>
+      <div class="aventure_info">
+        <%= @aventure.first_name %>
+        <span id="last_n"> <%= @aventure.last_name %></span>
+        |
+        <%= @aventure.age %> ans
       </div>
-  </div>
-  <div class="col-xs-8 right">
-      <%= @aventure.aventure_text.html_safe %>
+
+    </div>
+
+    <div class="col-xs-12 col-md-4 right">
+      <h2 id="title">“<%= @aventure.title %>”</h2>
+      <div class="aventure_text">
+        <%= @aventure.aventure_text.html_safe %>
+      </div>
 
       <%= @aventure.aventure_video %>
       <%= @aventure.aventure_audio %>
       <%= @aventure.tag_metier %>
       <%= @aventure.tag_region %>
       <%= @aventure.aventure_illu %>
-
-
       <strong>Rattaché aux variables :</strong>
       <% @aventure.variables.each do |variable| %>
       <%= link_to variable.name, variable, class: "btn" %>
       <% end %>
-
-    <%= link_to 'Edit', edit_aventure_path(@aventure) %>
-    <%= link_to 'Back', aventures_path %>
+      <%= link_to 'Edit', edit_aventure_path(@aventure) %>
+      <%= link_to 'Back', aventures_path %>
+    </div>
+    <div class="col-md-2"></div>
   </div>
 </div>

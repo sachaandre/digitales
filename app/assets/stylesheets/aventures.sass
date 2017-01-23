@@ -5,22 +5,43 @@
 @import "variables/*"
 @import "utils/*"
 
-
-.aventure_img
-  height: 400px
-  -webkit-box-shadow: 4px 6px 75px -20px rgba(0,0,0,0.5)
-  -moz-box-shadow: 4px 6px 75px -20px rgba(0,0,0,0.5)
-  box-shadow: 4px 6px 75px -20px rgba(0,0,0,0.5)
-.aventure_info
-  font-family: $sans-serif
-  font-weight: $medium
-
-  #last_n
-    font-family: $serif
-    font-weight: $light
-
-  font-size: 18px
-  padding-top: 20px
 .right
-  font-family: $serif
+  font-family: $sans-serif
   line-height: 30px
+
+  h2
+    font-family: $serif
+    font-size: 24px
+    margin: 10px 0
+
+  #title
+    margin-bottom: 30px
+    font-size: 26px
+    font-weight: $medium
+
+  .aventure_text
+    max-height: 520px
+    overflow-y: scroll
+    margin-bottom: 20px
+    padding: 20px
+    color: $lighten_dark_blue
+
+.left
+  text-align: center
+
+  .aventure_img
+    //height: 400px
+    -webkit-box-shadow: 4px 6px 75px -20px rgba(0,0,0,0.5)
+    -moz-box-shadow: 4px 6px 75px -20px rgba(0,0,0,0.5)
+    box-shadow: 4px 6px 75px -20px rgba(0,0,0,0.5)
+
+  .aventure_info
+    font-family: $sans-serif
+    font-weight: $medium
+
+    #last_n
+      font-family: $serif
+      font-weight: $light
+
+    font-size: 18px
+    padding-top: 20px
