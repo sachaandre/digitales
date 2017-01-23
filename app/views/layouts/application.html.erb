@@ -14,10 +14,11 @@
       <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Digitales</a>
+      <%= link_to 'Digitales', root_path, class: "navbar-brand" %>
+
     </div>
     <ul class="nav navbar-nav">
-      <li><%= link_to 'Accueil', root_path %></li>
+
 
         <li><%= link_to 'Aventures', aventures_path %></li>
         <li><%= link_to 'Indéfinitions', indefinitions_path %></li>

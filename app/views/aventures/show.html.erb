@@ -1,61 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <%= image_tag @aventure.aventure_portrait.url(:thumb) %>
-</p>
+  <div class="col-xs-4">
 
-<p>
-  <strong>Title:</strong>
-  <%= @aventure.title %>
-</p>
-<p>
-  <strong>Prénom:</strong>
-  <%= @aventure.first_name %>
-</p>
-<p>
-  <strong>Nom:</strong>
-  <%= @aventure.last_name %>
-</p>
-<p>
-  <strong>Age:</strong>
-  <%= @aventure.age %>
-</p>
-<p>
-  <strong>Aventure text:</strong>
-  <%= @aventure.aventure_text %>
-</p>
+      <%= image_tag @aventure.aventure_portrait.url(:thumb), class: "aventure_img" %>
 
-<p>
-  <strong>Aventure video:</strong>
-  <%= @aventure.aventure_video %>
-</p>
+    <div class="aventure_info">
+      <%= @aventure.first_name %>
+      <%= @aventure.last_name %>
+      |
+      <%= @aventure.age %> ans
+      </div>
+  </div>
+  <div class="col-xs-8 right">
+      <%= @aventure.aventure_text.html_safe %>
 
-<p>
-  <strong>Aventure audio:</strong>
-  <%= @aventure.aventure_audio %>
-</p>
+      <%= @aventure.aventure_video %>
+      <%= @aventure.aventure_audio %>
+      <%= @aventure.tag_metier %>
+      <%= @aventure.tag_region %>
+      <%= @aventure.aventure_illu %>
 
-<p>
-  <strong>Tag metier:</strong>
-  <%= @aventure.tag_metier %>
-</p>
 
-<p>
-  <strong>Tag region:</strong>
-  <%= @aventure.tag_region %>
-</p>
+      <strong>Rattaché aux variables :</strong>
+      <% @aventure.variables.each do |variable| %>
+      <%= link_to variable.name, variable, class: "btn" %>
+      <% end %>
 
-<p>
-  <strong>Aventure illu:</strong>
-  <%= @aventure.aventure_illu %>
-</p>
-
-<p>
-  <strong>Rattaché aux variables :</strong>
-  <% @aventure.variables.each do |variable| %>
-    <%= link_to variable.name, variable %>
-  <% end %>
-</p>
-
-<%= link_to 'Edit', edit_aventure_path(@aventure) %> |
-<%= link_to 'Back', aventures_path %>
+    <%= link_to 'Edit', edit_aventure_path(@aventure) %>
+    <%= link_to 'Back', aventures_path %>
+  </div>
+</div>
