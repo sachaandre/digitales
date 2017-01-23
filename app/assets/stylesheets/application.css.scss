@@ -16,3 +16,47 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ @import "variables/*";
+ @import "utils/*";
+
+body{
+  font-family: $sans-serif;
+  color: $dark_blue;
+}
+
+.navbar-default{
+  background-color: $dark_blue;
+  border:none;
+  border-radius: 0;
+
+}
+.navbar-default .navbar-brand{
+  color:white;
+  font-family: $serif;
+}
+.navbar-default .navbar-brand:hover{
+  color:white;
+
+}
+.navbar-default .navbar-nav > li > a{
+  color:white;
+}
+.navbar-default .navbar-nav > li > a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+.btn{
+  border-radius: 0;
+  border:none;
+  background-color: $dark_blue;
+  color:white;
+  font-variant: small-caps;
+}
+.btn:hover{
+  border-radius: 0;
+  border:none;
+  background-color: $light_blue;
+  color:white;
+}
