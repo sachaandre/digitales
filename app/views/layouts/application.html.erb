@@ -3,7 +3,7 @@
   <head>
     <title>Digitales</title>
     <%= csrf_meta_tags %>
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -11,10 +11,21 @@
 
   <body>
     <header>
-      <nav>
-        <%= link_to 'Aventures', aventures_path %>
-        <%= link_to 'Indéfinitions', indefinitions_path %>
-        <%= link_to 'Variables', variables_path %>
+      <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Digitales</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><%= link_to 'Accueil', root_path %></li>
+
+        <li><%= link_to 'Aventures', aventures_path %></li>
+        <li><%= link_to 'Indéfinitions', indefinitions_path %></li>
+        <li><%= link_to 'Variables', variables_path %></li>
+    </ul>
+  </div>
+
+
       </nav>
     </header>
     <%= yield %>

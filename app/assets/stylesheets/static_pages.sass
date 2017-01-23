@@ -4,43 +4,32 @@
 @import "variables/*"
 @import "utils/*"
 
-.hpage
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
+html, body
   height: 100%
-  +gradient($transparent_blue, $transparent_light_blue, $path)
+
+.slide
+  height: 100%
+  +gradient($transparent_blue,$transparent_light_blue ,$path)
   background-size: cover
-  background-position: center
-  display: flex
-  flex-flow: column nowrap
-  justify-content: space-around
-  align-items: center
+  margin-top: -20px
   color: $white
-  font-size: 46px
-  line-height: 46px
-  font-family: $serif
   text-align: center
-
-  p
-    font-size: 28px
-    line-height: 28px
-    width: 60vw
-    font-family: $sans-serif
-
-  .hpage_links
-    display: flex
-    justify-content: space-around
-
-    a
-      color: $white
-      text-decoration: none
-      border: 2px solid $white
-      border-radius: 35px
-      padding: 20px
-      transition: all 0.4s
-
-      &:hover
-        background: $white
-        color: $blue
+  .container
+    height: 100%
+    .row
+      height: 100%
+      .col-xs-12
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-flow: column nowrap
+        .slide-content
+          font-family: $sans-serif
+          h1
+            font-family: $serif
+            font-size: 40px
+          p
+            font-family: $serif
+            font-size: 22px
+            line-height: 22px
