@@ -1,32 +1,36 @@
-<%= form_for(indefinition) do |f| %>
-  <% if indefinition.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(indefinition.errors.count, "error") %> prohibited this indefinition from being saved:</h2>
+<div id="new_indefinition" class="container .form-horizontal">
 
-      <ul>
-      <% indefinition.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <%= form_for(indefinition) do |f| %>
+    <% if indefinition.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(indefinition.errors.count, "error") %> prohibited this indefinition from being saved:</h2>
+
+        <ul>
+        <% indefinition.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :def %>
+      <%= f.text_area :def, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Variable attachée"%>
+      <%= collection_check_boxes :indefinition, :variable_ids, Variable.all, :id, :name %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :def %>
-    <%= f.text_area :def %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Variable attachée"%>
-    <%= collection_check_boxes :indefinition, :variable_ids, Variable.all, :id, :name %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
