@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row aventure_row">
-    <div class="col-xs-12 col-md-6 left">
+    <div class="col-xs-12 col-md-4 left">
 
-      <%= image_tag @aventure.aventure_portrait.url(:large), class: "aventure_img" %>
+      <%= image_tag @aventure.aventure_portrait.url(:medium), class: "aventure_img" %>
       <div class="aventure_info">
         <%= @aventure.first_name %>
         <span id="last_n"> <%= @aventure.last_name %></span>
@@ -12,7 +12,7 @@
 
     </div>
 
-    <div class="col-xs-12 col-md-4 right">
+    <div class="col-xs-12 col-md-6 col-md-offset-2 right">
       <h2 id="title">“<%= @aventure.title %>”</h2>
       <span class="date"><%= @aventure.created_at.strftime("%-d %b")%></span>
       <div class="aventure_text">
@@ -31,6 +31,6 @@
       <%= link_to 'Edit', edit_aventure_path(@aventure) %>
       <%= link_to 'Back', aventures_path %>
     </div>
-    <div class="col-md-2"></div>
+
   </div>
 </div>
