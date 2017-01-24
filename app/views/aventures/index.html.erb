@@ -1,13 +1,97 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Aventures</h1>
-
-<% @aventures.each do |aventure| %>
-  <%= link_to image_tag(aventure.aventure_portrait.url(:thumb)), aventure%>
-<% end %>
-
-
-<br><br>
-
-
-<%= link_to 'New Aventure', new_aventure_path %>
+<div class="portrait_gallery">
+  <% @aventures.each do |aventure| %>
+  <div class="gallery_img">
+    <%= link_to image_tag(aventure.aventure_portrait.url(:thumb)), aventure %>
+    <div class="btn btn-white"><%= link_to "découvrir", aventure %></div>
+  </div>
+  <% end %>
+  <div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div><div class="gallery_img">
+    <a href="/aventures/6"><img src="http://s3-eu-west-2.amazonaws.com/mmidigitales/aventures/aventure_portraits/000/000/006/thumb/femme.jpg?1485248409" alt="Femme"></a>
+    <div class="btn btn-white"><a href="/aventures/6">découvrir</a></div>
+  </div>
+</div>
