@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :variables do
     resources :aventures, only: [:index]
   end
+  resources :tags do
+    resources :aventures, only: [:index]
+  end
 
   root 'static_pages#home_page'
 

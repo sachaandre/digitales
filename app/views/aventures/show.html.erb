@@ -5,9 +5,11 @@
       <%= image_tag @aventure.aventure_portrait.url(:medium), class: "aventure_img" %>
       <div class="aventure_info">
         <%= @aventure.first_name %>
-        <span id="last_n"> <%= @aventure.last_name %></span>
+        <span id="last_n">
+          <%= @aventure.last_name %></span>
         |
-        <%= @aventure.age %> ans
+        <%= @aventure.age %>
+        ans
       </div>
 
     </div>
@@ -22,12 +24,20 @@
       <%= @aventure.aventure_video %>
       <%= @aventure.aventure_audio %>
       <%= @aventure.aventure_illu %>
-      <strong>Rattaché aux variables :</strong>
-      <% @aventure.variables.each do |variable| %>
-      <%= link_to variable.name, variable, class: "btn" %>
-      <% end %>
-      <%= link_to 'Edit', edit_aventure_path(@aventure) %>
-      <%= link_to 'Back', aventures_path %>
+      <p>
+        <strong>Rattaché aux variables :</strong>
+        <% @aventure.variables.each do |variable| %>
+        <%= link_to variable.name, variable_aventures_path(@aventure), class: "btn" %>
+        <% end %>
+      </p>
+      <p>
+        <strong>Rattaché aux métiers :</strong>
+        <% @aventure.tags.each do |tag| %>
+        <%= link_to tag.tag_metier, tag_aventures_path(@aventure), class: "btn" %>
+        <% end %>
+        <%= link_to 'Edit', edit_aventure_path(@aventure) %>
+        <%= link_to 'Back', aventures_path %>
+      </p>
     </div>
 
   </div>

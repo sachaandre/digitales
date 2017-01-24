@@ -4,11 +4,9 @@ class AventuresController < ApplicationController
   # GET /aventures
   # GET /aventures.json
   def index
-    if params[:variable_id]
-      @aventures = Variable.find(params[:variable_id]).aventures
-    else
+
       @aventures = Aventure.all
-    end
+
   end
 
   # GET /aventures/1
@@ -74,6 +72,6 @@ class AventuresController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def aventure_params
-    params.require(:aventure).permit(:title, :aventure_text, :aventure_video, :aventure_audio, :aventure_portrait, :aventure_illu, :first_name, :last_name, :age, variable_ids: [])
+    params.require(:aventure).permit(:title, :aventure_text, :aventure_video, :aventure_audio, :aventure_portrait, :aventure_illu, :first_name, :last_name, :age, variable_ids: [],tag_ids: [])
   end
 end
