@@ -14,6 +14,7 @@
 
     <div class="col-xs-12 col-md-4 right">
       <h2 id="title">“<%= @aventure.title %>”</h2>
+      <span class="date"><%= @aventure.created_at.strftime("%-d %b")%></span>
       <div class="aventure_text">
         <%= @aventure.aventure_text.html_safe %>
       </div>
