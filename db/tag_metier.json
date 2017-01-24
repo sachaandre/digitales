@@ -1,0 +1,301 @@
+[{
+    "id": 1,
+    "tag_metier": "Vie"
+}, {
+    "id": 2,
+    "tag_metier": "Age"
+}, {
+    "id": 3,
+    "tag_metier": "Mort"
+}, {
+    "id": 4,
+    "tag_metier": "Alimentation"
+}, {
+    "id": 5,
+    "tag_metier": "Aliment"
+}, {
+    "id": 6,
+    "tag_metier": "Jeu"
+}, {
+    "id": 7,
+    "tag_metier": "Sport"
+}, {
+    "id": 8,
+    "tag_metier": "Commerce"
+}, {
+    "id": 9,
+    "tag_metier": "Argent"
+}, {
+    "id": 10,
+    "tag_metier": "Economie"
+}, {
+    "id": 11,
+    "tag_metier": "Entreprise"
+}, {
+    "id": 12,
+    "tag_metier": "Possession"
+}, {
+    "id": 13,
+    "tag_metier": "Communication"
+}, {
+    "id": 14,
+    "tag_metier": "Langage"
+}, {
+    "id": 15,
+    "tag_metier": "Ecriture"
+}, {
+    "id": 16,
+    "tag_metier": "Informer"
+}, {
+    "id": 17,
+    "tag_metier": "Télécommunications"
+}, {
+    "id": 18,
+    "tag_metier": "Internet"
+}, {
+    "id": 19,
+    "tag_metier": "Nom"
+}, {
+    "id": 20,
+    "tag_metier": "Mouvement"
+}, {
+    "id": 21,
+    "tag_metier": "Déplacement"
+}, {
+    "id": 22,
+    "tag_metier": "Transports"
+}, {
+    "id": 23,
+    "tag_metier": "Bateau"
+}, {
+    "id": 24,
+    "tag_metier": "Automobile"
+}, {
+    "id": 25,
+    "tag_metier": "Train"
+}, {
+    "id": 26,
+    "tag_metier": "Avion"
+}, {
+    "id": 27,
+    "tag_metier": "Deux-Roues"
+}, {
+    "id": 28,
+    "tag_metier": "Corps"
+}, {
+    "id": 29,
+    "tag_metier": "Organe"
+}, {
+    "id": 30,
+    "tag_metier": "Santé"
+}, {
+    "id": 31,
+    "tag_metier": "Hygiène"
+}, {
+    "id": 32,
+    "tag_metier": "Sommeil"
+}, {
+    "id": 33,
+    "tag_metier": "Position"
+}, {
+    "id": 34,
+    "tag_metier": "Sexualité"
+}, {
+    "id": 35,
+    "tag_metier": "Techniques"
+}, {
+    "id": 36,
+    "tag_metier": "Instruments"
+}, {
+    "id": 37,
+    "tag_metier": "Ordinateurs"
+}, {
+    "id": 38,
+    "tag_metier": "Animal"
+}, {
+    "id": 39,
+    "tag_metier": "Invertebré"
+}, {
+    "id": 40,
+    "tag_metier": "Vertebré"
+}, {
+    "id": 41,
+    "tag_metier": "Plante"
+}, {
+    "id": 42,
+    "tag_metier": "Pouvoir"
+}, {
+    "id": 43,
+    "tag_metier": "Politique"
+}, {
+    "id": 44,
+    "tag_metier": "Pays"
+}, {
+    "id": 45,
+    "tag_metier": "Justice"
+}, {
+    "id": 46,
+    "tag_metier": "Securité"
+}, {
+    "id": 47,
+    "tag_metier": "Militaire"
+}, {
+    "id": 48,
+    "tag_metier": "Famille"
+}, {
+    "id": 49,
+    "tag_metier": "Mariage"
+}, {
+    "id": 50,
+    "tag_metier": "Matière"
+}, {
+    "id": 51,
+    "tag_metier": "Atome"
+}, {
+    "id": 52,
+    "tag_metier": "Dechet"
+}, {
+    "id": 53,
+    "tag_metier": "Feu"
+}, {
+    "id": 54,
+    "tag_metier": "Eau"
+}, {
+    "id": 55,
+    "tag_metier": "Force"
+}, {
+    "id": 56,
+    "tag_metier": "Edifice"
+}, {
+    "id": 57,
+    "tag_metier": "Ville"
+}, {
+    "id": 58,
+    "tag_metier": "Voie"
+}, {
+    "id": 59,
+    "tag_metier": "Espace"
+}, {
+    "id": 60,
+    "tag_metier": "Orientation"
+}, {
+    "id": 61,
+    "tag_metier": "Distance"
+}, {
+    "id": 62,
+    "tag_metier": "Univers"
+}, {
+    "id": 63,
+    "tag_metier": "Terre"
+}, {
+    "id": 64,
+    "tag_metier": "Mer"
+}, {
+    "id": 65,
+    "tag_metier": "Continent"
+}, {
+    "id": 66,
+    "tag_metier": "Climat"
+}, {
+    "id": 67,
+    "tag_metier": "Saison"
+}, {
+    "id": 68,
+    "tag_metier": "Temps"
+}, {
+    "id": 69,
+    "tag_metier": "Date - Calendrier"
+}, {
+    "id": 70,
+    "tag_metier": "Fait"
+}, {
+    "id": 71,
+    "tag_metier": "Intellect"
+}, {
+    "id": 72,
+    "tag_metier": "Savoir"
+}, {
+    "id": 73,
+    "tag_metier": "Apprentissage"
+}, {
+    "id": 74,
+    "tag_metier": "Sens"
+}, {
+    "id": 75,
+    "tag_metier": "Oui - Non"
+}, {
+    "id": 76,
+    "tag_metier": "Verité"
+}, {
+    "id": 77,
+    "tag_metier": "Société"
+}, {
+    "id": 78,
+    "tag_metier": "Fête"
+}, {
+    "id": 79,
+    "tag_metier": "Esprit"
+}, {
+    "id": 80,
+    "tag_metier": "Religion"
+}, {
+    "id": 81,
+    "tag_metier": "Nombre"
+}, {
+    "id": 82,
+    "tag_metier": "Mesure"
+}, {
+    "id": 83,
+    "tag_metier": "Dimension"
+}, {
+    "id": 84,
+    "tag_metier": "Sentiment"
+}, {
+    "id": 85,
+    "tag_metier": "Salutation"
+}, {
+    "id": 86,
+    "tag_metier": "Faire"
+}, {
+    "id": 87,
+    "tag_metier": "Finalité"
+}, {
+    "id": 88,
+    "tag_metier": "Travail"
+}, {
+    "id": 89,
+    "tag_metier": "Agriculture"
+}, {
+    "id": 90,
+    "tag_metier": "Industrie"
+}, {
+    "id": 91,
+    "tag_metier": "Sens"
+}, {
+    "id": 92,
+    "tag_metier": "Vision"
+}, {
+    "id": 93,
+    "tag_metier": "Audition"
+}, {
+    "id": 94,
+    "tag_metier": "Toucher"
+}, {
+    "id": 95,
+    "tag_metier": "Être Humain"
+}, {
+    "id": 96,
+    "tag_metier": "Soi"
+}, {
+    "id": 97,
+    "tag_metier": "Objets"
+}, {
+    "id": 98,
+    "tag_metier": "Textile"
+}, {
+    "id": 99,
+    "tag_metier": "Art"
+}, {
+    "id": 100,
+    "tag_metier": "..."
+}]
