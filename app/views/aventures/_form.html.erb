@@ -1,74 +1,78 @@
-<%= form_for(aventure) do |f| %>
-  <% if aventure.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(aventure.errors.count, "error") %> prohibited this aventure from being saved:</h2>
+<div id="new_aventure" class="container">
+  <%= form_for(aventure) do |f| %>
+    <% if aventure.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(aventure.errors.count, "error") %> prohibited this aventure from being saved:</h2>
 
-      <ul>
-      <% aventure.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <ul>
+        <% aventure.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="field col-md-6 col-xs-12">
+        <%= f.label :title, "Titre" %>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field col-md-6 col-xs-12">
+        <%= f.label "Prénom" %>
+        <%= f.text_field :first_name %>
+      </div>
+      <div class="field col-md-6 col-xs-12">
+        <%= f.label "Nom" %>
+        <%= f.text_field :last_name %>
+      </div>
+      <div class="field col-md-6 col-xs-12">
+        <%= f.label "Age" %>
+        <%= f.text_field :age %>
+      </div>
+
+      <div class="field">
+        <%= f.label :aventure_text, "Texte de l'aventure" %>
+        <%= f.text_area :aventure_text, class: "tinymce"%>
+        <%= tinymce %>
+
+      </div>
+
+      <div class="field">
+        <%= f.label :aventure_video, "Vidéo de l'aventure" %>
+        <%= f.text_field :aventure_video %>
+      </div>
+
+      <div class="field">
+        <%= f.label :aventure_audio, "Audio de l'aventure" %>
+        <%= f.text_field :aventure_audio %>
+      </div>
+
+      <div class="field">
+        <%= f.label :tag_metier %>
+        <%= f.text_field :tag_metier %>
+      </div>
+
+      <div class="field">
+        <%= f.label :tag_region %>
+        <%= f.text_field :tag_region %>
+      </div>
+
+      <div class="field">
+        <%= f.label :aventure_portrait %>
+        <%= f.file_field :aventure_portrait %>
+      </div>
+
+      <div class="field">
+        <%= f.label :aventure_illu %>
+        <%= f.text_field :aventure_illu %>
+      </div>
+      <div class="field">
+        <%= f.label "Variables attachées"%>
+        <%= collection_check_boxes :aventure, :variable_ids, Variable.all, :id, :name %>
+      </div>
+      <div class="">
+        <%= f.submit %>
+      </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label "Prénom" %>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label "Nom" %>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label "Age" %>
-    <%= f.text_field :age %>
-  </div>
-
-  <div class="field">
-    <%= f.label :aventure_text %>
-    <%= f.text_area :aventure_text, class: "tinymce"%>
-    <%= tinymce %>
-
-  </div>
-
-  <div class="field">
-    <%= f.label :aventure_video %>
-    <%= f.text_field :aventure_video %>
-  </div>
-
-  <div class="field">
-    <%= f.label :aventure_audio %>
-    <%= f.text_field :aventure_audio %>
-  </div>
-
-  <div class="field">
-    <%= f.label :tag_metier %>
-    <%= f.text_field :tag_metier %>
-  </div>
-
-  <div class="field">
-    <%= f.label :tag_region %>
-    <%= f.text_field :tag_region %>
-  </div>
-
-  <div class="field">
-    <%= f.label :aventure_portrait %>
-    <%= f.file_field :aventure_portrait %>
-  </div>
-
-  <div class="field">
-    <%= f.label :aventure_illu %>
-    <%= f.text_field :aventure_illu %>
-  </div>
-  <div class="field">
-    <%= f.label "Variables attachées"%>
-    <%= collection_check_boxes :aventure, :variable_ids, Variable.all, :id, :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
