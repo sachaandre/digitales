@@ -46,16 +46,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :tag_metier %>
-    <%= f.text_field :tag_metier %>
-  </div>
-
-  <div class="field">
-    <%= f.label :tag_region %>
-    <%= f.text_field :tag_region %>
-  </div>
-
-  <div class="field">
     <%= f.label :aventure_portrait %>
     <%= f.file_field :aventure_portrait %>
   </div>
@@ -63,6 +53,13 @@
   <div class="field">
     <%= f.label :aventure_illu %>
     <%= f.text_field :aventure_illu %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Tags"%>
+    <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :tag_metier, {}, {class: "checkbox", :multiple=>true}) do |b|%>
+      <%= b.label{b.check_box + b.text} %>
+    <%end%>
   </div>
   <div class="field">
     <%= f.label "Variables attachées"%>

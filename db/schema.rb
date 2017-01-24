@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170123111757) do
+ActiveRecord::Schema.define(version: 20170124114229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 20170123111757) do
     t.text     "aventure_text"
     t.string   "aventure_video"
     t.string   "aventure_audio"
-    t.string   "tag_metier"
-    t.string   "tag_region"
     t.string   "aventure_portrait"
     t.string   "aventure_illu"
     t.datetime "created_at",                     null: false
@@ -40,6 +38,11 @@ ActiveRecord::Schema.define(version: 20170123111757) do
     t.integer "indefinition_id"
     t.index ["aventure_id"], name: "index_aventures_indefinitions_on_aventure_id", using: :btree
     t.index ["indefinition_id"], name: "index_aventures_indefinitions_on_indefinition_id", using: :btree
+  end
+
+  create_table "aventures_tags", id: false, force: :cascade do |t|
+    t.integer "aventure_id", null: false
+    t.integer "tag_id",      null: false
   end
 
   create_table "aventures_variables", force: :cascade do |t|
@@ -61,6 +64,12 @@ ActiveRecord::Schema.define(version: 20170123111757) do
     t.integer "variable_id"
     t.index ["indefinition_id"], name: "index_indefinitions_variables_on_indefinition_id", using: :btree
     t.index ["variable_id"], name: "index_indefinitions_variables_on_variable_id", using: :btree
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "tag_metier"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "variables", force: :cascade do |t|
