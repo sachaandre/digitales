@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170124100252) do
+ActiveRecord::Schema.define(version: 20170124114229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,11 @@ ActiveRecord::Schema.define(version: 20170124100252) do
     t.integer "indefinition_id"
     t.index ["aventure_id"], name: "index_aventures_indefinitions_on_aventure_id", using: :btree
     t.index ["indefinition_id"], name: "index_aventures_indefinitions_on_indefinition_id", using: :btree
+  end
+
+  create_table "aventures_tags", id: false, force: :cascade do |t|
+    t.integer "aventure_id", null: false
+    t.integer "tag_id",      null: false
   end
 
   create_table "aventures_variables", force: :cascade do |t|
