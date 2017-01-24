@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170123111757) do
+ActiveRecord::Schema.define(version: 20170124091940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 20170123111757) do
     t.text     "aventure_text"
     t.string   "aventure_video"
     t.string   "aventure_audio"
-    t.string   "tag_metier"
-    t.string   "tag_region"
     t.string   "aventure_portrait"
     t.string   "aventure_illu"
     t.datetime "created_at",                     null: false
