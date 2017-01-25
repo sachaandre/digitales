@@ -6,7 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 tagJson = ActiveSupport::JSON.decode(File.read('db/tag_metier.json'))
+varJson = ActiveSupport::JSON.decode(File.read('db/variables.json'))
+
 
 tagJson.each do |a|
+  Tag.create!(a)
+end
+
+varJson.each do |a|
   Tag.create!(a)
 end

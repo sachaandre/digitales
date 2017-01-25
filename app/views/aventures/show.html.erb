@@ -35,8 +35,13 @@
         <% @aventure.tags.each do |tag| %>
         <%= link_to tag.tag_metier, tag_aventures_path(@aventure), class: "btn" %>
         <% end %>
+
         <%= link_to 'Edit', edit_aventure_path(@aventure) %>
         <%= link_to 'Back', aventures_path %>
+
+        |
+
+        <%= link_to 'Delete', aventure_path(@aventure), method: :delete%>
       </p>
     </div>
 
