@@ -13,13 +13,6 @@ tagJson.each do |a|
   Tag.create!(a)
 end
 
-<<<<<<< HEAD
-varJson = ActiveSupport::JSON.decode(File.read(''))
-
 varJson.each do |a|
   Variable.create!(a)
-=======
-varJson.each do |a|
-  Tag.create!(a)
->>>>>>> 173bda2ad48aa0afbd08c479cc31a2c7896a276d
 end
