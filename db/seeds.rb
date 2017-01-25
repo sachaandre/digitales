@@ -10,3 +10,9 @@ tagJson = ActiveSupport::JSON.decode(File.read('db/tag_metier.json'))
 tagJson.each do |a|
   Tag.create!(a)
 end
+
+varJson = ActiveSupport::JSON.decode(File.read(''))
+
+varJson.each do |a|
+  Variable.create!(a)
+end
