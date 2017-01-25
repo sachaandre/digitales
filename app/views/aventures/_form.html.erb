@@ -1,58 +1,50 @@
 <%= form_for(aventure) do |f| %>
-  <% if aventure.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(aventure.errors.count, "error") %> prohibited this aventure from being saved:</h2>
-
-      <ul>
-      <% aventure.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
+    <%= f.error :title %>
   </div>
   <div class="field">
     <%= f.label "Prénom" %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, class: "form-control" %>
+    <%= f.error :first_name %>
   </div>
   <div class="field">
     <%= f.label "Nom" %>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, class: "form-control" %>
+    <%= f.error :last_name %>
   </div>
   <div class="field">
     <%= f.label "Age" %>
-    <%= f.text_field :age %>
+    <%= f.text_field :age, class: "form-control" %>
+    <%= f.error :age %>
   </div>
 
   <div class="field">
     <%= f.label :aventure_text %>
     <%= f.text_area :aventure_text, class: "tinymce"%>
     <%= tinymce %>
-
   </div>
 
   <div class="field">
     <%= f.label :aventure_video %>
-    <%= f.text_field :aventure_video %>
+    <%= f.text_field :aventure_video, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :aventure_audio %>
-    <%= f.text_field :aventure_audio %>
+    <%= f.text_field :aventure_audio, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :aventure_portrait %>
-    <%= f.file_field :aventure_portrait %>
+    <%= f.file_field :aventure_portrait, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :aventure_illu %>
-    <%= f.text_field :aventure_illu %>
+    <%= f.text_field :aventure_illu, class: "form-control" %>
   </div>
 
   <div class="field">

@@ -2,75 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "variables/*"
-@import "utils/*"
+@import "partials/*"
 
-.container
-  padding-top: 60px
-  padding-bottom: 60px
-
-.right
-  font-family: $sans-serif
-  line-height: 30px
-
-  h2
-    font-family: $serif
-    font-size: 24px
-    margin: 10px 0
-
-  #title
-    margin-bottom: 30px
-    font-size: 26px
-    font-weight: $medium
-
-  .aventure_text
-    max-height: 520px
-    overflow-y: scroll
-    margin-bottom: 20px
-
-    color: $lighten_dark_blue
-
-.left
-  text-align: center
-
-  .aventure_img
-    //height: 400px
-    -webkit-box-shadow: 4px 6px 75px -20px rgba(0,0,0,0.5)
-    -moz-box-shadow: 4px 6px 75px -20px rgba(0,0,0,0.5)
-    box-shadow: 4px 6px 75px -20px rgba(0,0,0,0.5)
-
-  .aventure_info
-    font-family: $sans-serif
-    font-weight: $medium
-
-    #last_n
-      font-family: $serif
-      font-weight: $light
-
-    font-size: 18px
-    padding-top: 20px
-
-
-// MISE EN FORME GALLERIE PORTRAIT
-
-.portrait_gallery
-  display: flex
-  flex-flow: row wrap
-  justify-content: center
-  .gallery_img
-    position: relative
-    overflow: hidden
-    height: 250px
-    .btn
-      opacity: 0
-      position: absolute
-      bottom: 0px
-      left: 50%
-      transform: translateX(-50%)
-      transition: opacity .3s, bottom .3s
-      a
-        color: inherit
-  .gallery_img:hover
-    .btn
-      opacity: 1
-      bottom: 20px
+#new_aventure
+  .form-group
+    label
+      margin-bottom: 10px
