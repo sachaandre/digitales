@@ -24,23 +24,21 @@
       <%= @aventure.aventure_video %>
       <%= @aventure.aventure_audio %>
       <%= @aventure.aventure_illu %>
-      <p>
+      <div class="label_container">
         <strong>Rattaché aux variables :</strong>
         <% @aventure.variables.each do |variable| %>
-        <%= link_to variable.name, variable_aventures_path(@aventure), class: "btn" %>
+        <%= link_to variable.name.downcase!, variable_path(variable), class: "label" %>
         <% end %>
-      </p>
-      <p>
+      </div>
+      <div class="label_container">
         <strong>Rattaché aux métiers :</strong>
         <% @aventure.tags.each do |tag| %>
-        <%= link_to tag.tag_metier, tag_aventures_path(@aventure), class: "btn" %>
+        <%= link_to tag.tag_metier.downcase!, tag_aventures_path(@aventure), class: "label" %>
         <% end %>
-
+      </div>
+      <p>
         <%= link_to 'Edit', edit_aventure_path(@aventure) %>
         <%= link_to 'Back', aventures_path %>
-
-        |
-
         <%= link_to 'Delete', aventure_path(@aventure), method: :delete%>
       </p>
     </div>
