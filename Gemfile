@@ -16,7 +16,9 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'tinymce-rails'
 
-gem "devise"
+gem 'devise'
+
+gem 'rails_admin', '~> 1.1.1'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
