@@ -18,6 +18,8 @@ gem 'tinymce-rails'
 
 gem 'devise'
 
+gem 'annotate', '~> 2.7', '>= 2.7.1'
+
 gem 'rails_admin', '~> 1.1.1'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
