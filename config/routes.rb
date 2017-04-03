@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   end
 
 
-	devise_for :users
+	devise_for :users, :controllers => { registrations: 'registrations' }
 	as :user do
   	get 'signin', to: 'devise/sessions#new', as: :signin
   	get 'signup', to: 'devise/registrations#new', as: :signup
