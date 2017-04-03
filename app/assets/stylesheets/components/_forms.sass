@@ -1,0 +1,38 @@
+@import "../variables/colors"
+@import "../variables/fonts"
+
+.forms
+	border: 2px solid $light_blue
+	border-bottom: none
+	border-radius: 5px
+	border-bottom-right-radius: 20px
+	border-bottom-left-radius: 20px
+	padding: 30px 0px 0px 0px
+
+	h2
+		font-size: 20px
+		font-family: $serif
+		margin-bottom: 15px
+
+	.actions
+		background-color: $light_blue
+		width: 100%
+		margin: 20px 0px 0px 0px
+		border: 0px solid $light_blue
+		border-bottom-left-radius: 20px
+		border-bottom-right-radius: 20px
+
+		&:hover
+			border: none
+
+		input
+			padding: 20px
+			background-color: $light_blue
+			color: $white
+			border: 1px solid $light_blue
+			border-bottom-right-radius: 20px
+			border-bottom-left-radius: 20px
+			transition: 0.1s all
+			&:hover
+				background: $dark_blue
+				border: 1px solid $dark_blue
