@@ -1,29 +1,32 @@
 @import "../variables/*"
 
 .navbar-default
-  background-color: $dark_blue
-  border: none
-  border-radius: 0
-
+	background-color: $dark_blue
+	border: none
+	border-radius: 0
 
 .navbar-default .navbar-brand
-  color: $white
-  font-family: $serif
-  font-size: 20px
+	color: $white
+	font-family: $serif
+	font-size: 20px
 
 .navbar-default .navbar-brand:hover
-  color: $darken_white
+	color: $darken_white
 
 .navbar-default .navbar-nav
-  li
-    a
-      color: $white
-      font-size: 14px
-      font-family: $serif
+	li
+		color: $white
+		a
+			color: $white
+			font-size: 14px
+			font-family: $serif
 
 .navbar-default .navbar-nav
-  li
-    a
-      &:hover
-        color: white
-        text-decoration: underline
+	li
+		a
+			&:hover
+				color: white
+				text-decoration: underline
+
+.right
+	align-items: flex-end

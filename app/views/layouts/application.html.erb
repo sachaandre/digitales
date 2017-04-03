@@ -5,27 +5,31 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
 
   <body>
     <header>
       <nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <%= link_to 'Digitales', root_path, class: "navbar-brand" %>
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <%= link_to 'Digitales', root_path, class: "navbar-brand" %>
+			    </div>
+			    <ul class="nav navbar-nav">
+			        <li><%= link_to 'Aventures', aventures_path %></li>
+			        <li><%= link_to 'Indéfinitions', indefinitions_path %></li>
+			        <li><%= link_to 'Variables', variables_path %></li>
+					</ul>
 
-    </div>
-    <ul class="nav navbar-nav">
-
-
-        <li><%= link_to 'Aventures', aventures_path %></li>
-        <li><%= link_to 'Indéfinitions', indefinitions_path %></li>
-        <li><%= link_to 'Variables', variables_path %></li>
-    </ul>
-  </div>
-
-
+					<ul class="nav navbar-nav navbar-right">
+						<% if user_signed_in? %>
+							<li class="right"><%=link_to current_user.email, edit_user_registration_path%></li>
+							<li class="right"><%= link_to 'Déconnexion', signout_path, method: :delete%></li>
+						<% else %>
+							<li class="right"><%= link_to 'Connexion', signin_path%></li>
+							<li class="right"><%= link_to 'Inscription', signup_path%></li>
+						<% end %>
+					</ul>
+			  </div>
       </nav>
     </header>
     <%= yield %>
