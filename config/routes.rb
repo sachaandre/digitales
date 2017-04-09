@@ -1,10 +1,10 @@
-Rails.application.routes.draw do
+	Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  resources :tags
-  resources :indefinitions
-  resources :variables
-  resources :aventures
+  resources :tags, only: [:index, :show]
+  resources :indefinitions, only: [:index, :show]
+  resources :variables, only: [:index, :show]
+  resources :aventures, only: [:index, :show]
 
 	root 'static_pages#home_page'
 
