@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403125241) do
+ActiveRecord::Schema.define(version: 20170412135101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20170403125241) do
     t.text     "first_name"
     t.text     "last_name"
     t.integer  "age"
+    t.integer  "country_id"
+    t.index ["country_id"], name: "index_aventures_on_country_id", using: :btree
   end
 
   create_table "aventures_indefinitions", force: :cascade do |t|
@@ -50,6 +52,13 @@ ActiveRecord::Schema.define(version: 20170403125241) do
     t.integer "variable_id"
     t.index ["aventure_id"], name: "index_aventures_variables_on_aventure_id", using: :btree
     t.index ["variable_id"], name: "index_aventures_variables_on_variable_id", using: :btree
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string   "name"
+    t.string   "path"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "indefinitions", force: :cascade do |t|
@@ -78,21 +87,21 @@ ActiveRecord::Schema.define(version: 20170403125241) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.boolean  "admin"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.string   "first_name"
     t.string   "last_name"
+    t.boolean  "admin",                  default: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
@@ -104,4 +113,5 @@ ActiveRecord::Schema.define(version: 20170403125241) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "aventures", "countries"
 end

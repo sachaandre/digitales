@@ -5,6 +5,7 @@
   resources :indefinitions, only: [:index, :show]
   resources :variables, only: [:index, :show]
   resources :aventures, only: [:index, :show]
+  resources :countries, only: [:index, :show]
 
 	root 'static_pages#home_page'
 

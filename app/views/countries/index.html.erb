@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+    <svg class="countries"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:svg="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+        version="1.2"
+        id="svg2"
+        x="0px"
+        y="0px"
+        width="950px"
+        height="620px"
+        viewBox="0 0 950 620"
+        xml:space="preserve"
+        inkscape:version="0.91 r13725"
+        sodipodi:docname="World_map_-_low_resolution.svg"><metadata id="metadata346"><rdf:RDF><cc:Work
+        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+        rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs id="defs344" /><sodipodi:namedview
+        pagecolor="#ffffff"
+        bordercolor="#666666"
+        borderopacity="1"
+        objecttolerance="10"
+        gridtolerance="10"
+        guidetolerance="10"
+        inkscape:pageopacity="0"
+        inkscape:pageshadow="2"
+        inkscape:window-width="1920"
+        inkscape:window-height="980" id="namedview342"
+        showgrid="false"
+        inkscape:object-nodes="true"
+        inkscape:snap-smooth-nodes="true"
+        inkscape:snap-nodes="true"
+        inkscape:object-paths="true"
+        inkscape:zoom="1"
+        inkscape:cx="248.04005"
+        inkscape:cy="326.05286"
+        inkscape:window-x="0"
+        inkscape:window-y="34"
+        inkscape:window-maximized="1"
+        inkscape:current-layer="svg2"/>
+        <% @countries.each do |country| %>
+            <%= tag :path, d: country.path, onclick: 'window.location.href = \''+country_path(country)+'\'', title: country.name %>
+        <% end %>
+    </svg>
+</div>
