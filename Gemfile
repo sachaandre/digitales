@@ -44,6 +44,9 @@ gem 'aws-sdk'
 
 gem "figaro"
 
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

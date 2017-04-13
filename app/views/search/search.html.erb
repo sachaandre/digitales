@@ -1,0 +1,31 @@
+<div class="container search-container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 text-center">
+      <h1 class="search-container__title">Rechercher une aventure</h1>
+    </div>
+  </div>
+  <div class="row search-form">
+    <div class="col-xs-8 col-xs-offset-2">
+      <%= form_for search_path, method: :get do |f| %>
+
+      <%= text_field_tag :q, params[:q],class: "form-control input-search" %>
+      <%= submit_tag "Go",class: "form-control button-search", name: nil %>
+
+      <% end %>
+    </div>
+  </div>
+  <div class="row search-results">
+    <div class="col-xs-8 col-xs-offset-2">
+      <% @aventures.each do |aventure| %>
+      <div class="search-result">
+        <h3 class="search-result__title">
+          <%= link_to aventure.title, controller: "aventures", action: "show", id: aventure._id%>
+        </h3>
+        <p>
+          <%= truncate aventure.aventure_text, length: 300, escape: false %>
+        </p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

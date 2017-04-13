@@ -24,5 +24,9 @@
   	delete 'signout', to: 'devise/sessions#destroy', as: :signout
 	end
 
+  # Rotue for elastic search
+	get 'search', to: 'search#search', as: :search
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
