@@ -1,13 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="jumbotron">
+    <h2 class="variable_name">
+      <%= @country.name.downcase! %>
+    </h2>
 
-<h1><%= @country.name %></h1>
 
-<table>
-    <tbody>
-        <% @country.aventures.each do |aventure| %>
-            <tr>
-                <td><%= link_to aventure.title, aventure %></td>
-            </tr>
-        <% end %>
-    </tbody>
-</table>
+  </div>
+</div>
+<div class="portrait_gallery">
+  <% @country.aventures.each do |aventure| %>
+  <div class="gallery_img">
+    <%= link_to image_tag(aventure.aventure_portrait.url(:thumb)), aventure %>
+    <div class="btn btn-white"><%= link_to "découvrir", aventure %></div>
+  </div>
+  <% end %>
+</div>
