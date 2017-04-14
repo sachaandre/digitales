@@ -10,8 +10,9 @@
         |
         <%= @aventure.age %> ans
         |
+        <% if @aventure.country %>
         <%= link_to @aventure.country.name, @aventure.country %>
-
+        <% end %>
       </div>
 
     </div>
