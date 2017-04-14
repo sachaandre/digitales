@@ -47,8 +47,8 @@ gem "figaro"
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
-gem 'rails_serve_static_assets'
-gem 'rails_stdout_logging'
+gem 'rails_12factor', group: :production
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
