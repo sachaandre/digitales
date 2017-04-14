@@ -8,8 +8,10 @@
         <span id="last_n">
           <%= @aventure.last_name %></span>
         |
-        <%= @aventure.age %>
-        ans
+        <%= @aventure.age %> ans
+        |
+        <%= link_to @aventure.country.name, @aventure.country %>
+
       </div>
 
     </div>
