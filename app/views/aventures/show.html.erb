@@ -36,7 +36,7 @@
       <div class="label_container">
         <strong>Rattaché aux métiers :</strong>
         <% @aventure.tags.each do |tag| %>
-        <%= link_to tag.tag_metier.downcase!, tag_aventures_path(tag), class: "label" %>
+        <%= link_to tag.tag_metier.downcase!, tag_path(tag), class: "label" %>
         <% end %>
       </div>
     </div>

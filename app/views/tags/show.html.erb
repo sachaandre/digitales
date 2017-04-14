@@ -1,8 +1,16 @@
-<p id="notice"><%= notice %></p>
 <div class="container">
-  <p>
-    <strong>Métiers:</strong>
-    <%= @tag.tag_metier %>
-  </p>
-  
+  <div class="jumbotron">
+    <h2 class="variable_name">
+      <%= @tag.tag_metier.downcase! %>
+    </h2>
+
+  </div>
+</div>
+<div class="portrait_gallery">
+  <% @tag.aventures.each do |aventure| %>
+  <div class="gallery_img">
+    <%= link_to image_tag(aventure.aventure_portrait.url(:thumb)), aventure %>
+    <div class="btn btn-white"><%= link_to "découvrir", aventure %></div>
+  </div>
+  <% end %>
 </div>
