@@ -9,32 +9,41 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-default navbar-fixed-bottom">
-			  <div class="container-fluid">
-			    <div class="navbar-header">
-			      <%= link_to 'Digitales', root_path, class: "navbar-brand" %>
-			    </div>
-			    <ul class="nav navbar-nav">
-			        <li><%= link_to 'Aventures', aventures_path %></li>
-			        <li><%# link_to 'Indéfinitions', indefinitions_path %></li>
-			        <li><%= link_to 'Variables', variables_path %></li>
-			        <li><%= link_to 'Carte', countries_path %></li>
-			        <li><%= link_to 'Recherche', search_path %></li>
-					</ul>
+      <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
 
-					<ul class="nav navbar-nav navbar-right">
-						<% if user_signed_in? %>
-							<li><%=link_to current_user.email, edit_user_registration_path%></li>
-							<li><%= link_to 'Déconnexion', signout_path, method: :delete%></li>
-							<% if current_user.admin? %>
-								<li><%= link_to 'Administration', rails_admin_path%></li>
-							<% end %>
-						<% else %>
-							<li><%= link_to 'Connexion', signin_path%></li>
-							<li><%= link_to 'Inscription', signup_path%></li>
-						<% end %>
-					</ul>
-			  </div>
+          <div class="navbar-header">
+            <%= link_to 'Digitales', root_path, class: "navbar-brand" %>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><%= link_to 'Aventures', aventures_path %></li>
+              <li><%# link_to 'Indéfinitions', indefinitions_path %></li>
+              <li><%= link_to 'Variables', variables_path %></li>
+              <li><%= link_to 'Carte', countries_path %></li>
+              <li><%= link_to 'Recherche', search_path %></li>
+
+                <% if user_signed_in? %>
+                <li><%=link_to current_user.email, edit_user_registration_path%></li>
+                <li><%= link_to 'Déconnexion', signout_path, method: :delete%></li>
+                <% if current_user.admin? %>
+                <li><%= link_to 'Administration', rails_admin_path%></li>
+                <% end %>
+              <% else %>
+                <li><%= link_to 'Connexion', signin_path%></li>
+                <li><%= link_to 'Inscription', signup_path%></li>
+                <% end %>
+            </ul>
+            </div>
+
+
+
+
       </nav>
     </header>
     <%= yield %>
